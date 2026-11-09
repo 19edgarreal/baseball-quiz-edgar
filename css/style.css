@@ -134,3 +134,9 @@ footer {
         width: 100% !important;
     }
 }
+/* Improve button accessibility */
+.answer-btn:focus-visible,
+#show-result:focus-visible {
+    outline: 3px solid #e5a000;
+    outline-offset: 4px;
+}
