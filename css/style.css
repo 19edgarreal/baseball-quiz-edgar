@@ -1,6 +1,136 @@
-.selected {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
+
+/* General page styling */
+body {
+    background: linear-gradient(135deg, #e8f0ff, #f8fbff);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202b3c;
+    min-height: 100vh;
 }
-  
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #102b50, #174b7a);
+    color: white;
+    border-bottom: 5px solid #e5a000;
+    padding: 45px 15px;
+}
+
+header h1 {
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+header p {
+    margin-top: 12px;
+    color: #dce9f8;
+}
+
+/* Question cards */
+.question-block {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.09);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.13);
+}
+
+.question-block h4 {
+    color: #17385f;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Answer buttons */
+.answer-btn {
+    min-height: 55px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.answer-btn:hover {
+    background-color: #174b7a;
+    color: white;
+    border-color: #174b7a;
+}
+
+/* Selected answer */
+.answer-btn.selected {
+    background-color: #174b7a;
+    color: white;
+    border-color: #174b7a;
+    box-shadow: 0 0 0 3px rgba(23, 75, 122, 0.15);
+}
+
+/* Results button */
+#show-result {
+    background-color: #e5a000;
+    border: none;
+    color: #142b48;
+    font-weight: 800;
+    padding: 13px 35px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+#show-result:hover {
+    background-color: #c98c00;
+    transform: scale(1.04);
+}
+
+/* Result card */
+#result-container {
+    border: none;
+    border-top: 6px solid #e5a000;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#result-container h2 {
+    color: #17385f;
+    font-weight: 800;
+}
+
+#result-title {
+    color: #d18c00;
+    font-weight: 800;
+}
+
+#result-text {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background-color: #102b50;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    .question-block {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    .answer-btn {
+        font-size: 13px;
+        min-height: 65px;
+    }
+
+    #result-container {
+        width: 100% !important;
+    }
+}
